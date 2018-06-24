@@ -1,0 +1,291 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03-jun-2018, 17:22:35
+    Author     : Ruben
+*/
+
+body.sl-app {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+/* Containers */
+.sl-flex-container {
+    display: flex;
+    flex: 1;
+}
+
+.sl-flex-box {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.sl-flex-box.sl-flex-card {
+    padding: 16px 10px 16px 10px;
+}
+
+
+
+/* Overflow */
+.sl-overflow-h {
+    overflow-y: auto;
+}
+
+/* Navbar */
+.sl-flex-nav {
+    display: flex;
+    flex: 0 0 56px;
+    flex-direction: row;
+    
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.sl-flex-nav-item {
+    display: flex;
+    flex: 0 0 auto;
+    padding: 8px 12px 8px 12px;
+    
+    justify-content: center;
+    align-items: center;
+    
+    color: rgba(255,255,255,.5);
+    text-decoration: none;
+}
+
+.sl-flex-nav-item:hover {
+    color: rgba(255,255,255,.8);
+}
+
+.sl-flex-nav-brand {
+    color: rgb(255,255,255);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.sl-flex-nav-brand > img {
+    margin-right: 5px;
+}
+
+.sl-flex-nav-brand:hover {
+    color: rgb(255,255,255);
+}
+
+.sl-flex-nav-item-active {
+    color: rgb(255,255,255);
+}
+
+.sl-flex-nav-item-active:hover {
+    color: rgb(255,255,255);
+}
+
+/* Input */
+.sl-flex-input {
+    display: flex;
+    flex: 0 0 24px;
+    padding: 6px;
+    border: none;
+    
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+
+/* Buttons */
+.sl-flex-btn {
+    display: flex;
+    flex: 0 0 36px;
+    padding: 8px 12px 8px 12px;
+    
+    justify-content: center;
+    align-items: center;
+    
+    color: rgba(255,255,255, 0.9);
+    background-color: #3F51B5;
+    text-decoration: none;
+    
+    transition: all 300ms;
+}
+
+.sl-flex-btn:hover {
+    box-shadow:inset 0 0 0 99999px rgba(0,0,0,0.3);
+}
+
+/* Background colors */
+.sl-background-gradient {
+    background: rgba(121, 91, 176, 1);
+    background: -moz-linear-gradient(45deg, rgba(121, 91, 176, 1) 0%, rgba(74, 193, 255, 1) 66%, rgba(76, 234, 255, 1) 92%, rgba(76, 234, 255, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(121, 91, 176, 1)), color-stop(66%, rgba(74, 193, 255, 1)), color-stop(92%, rgba(76, 234, 255, 1)), color-stop(100%, rgba(76, 234, 255, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(121, 91, 176, 1) 0%, rgba(74, 193, 255, 1) 66%, rgba(76, 234, 255, 1) 92%, rgba(76, 234, 255, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(121, 91, 176, 1) 0%, rgba(74, 193, 255, 1) 66%, rgba(76, 234, 255, 1) 92%, rgba(76, 234, 255, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(121, 91, 176, 1) 0%, rgba(74, 193, 255, 1) 66%, rgba(76, 234, 255, 1) 92%, rgba(76, 234, 255, 1) 100%);
+    background: linear-gradient(45deg, rgba(121, 91, 176, 1) 0%, rgba(74, 193, 255, 1) 66%, rgba(76, 234, 255, 1) 92%, rgba(76, 234, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#795bb0', endColorstr='#4ceaff', GradientType=1);
+}
+
+.sl-background-transparent-dark-3 {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sl-background-green {
+    background-color: #4CAF50 !important;
+}
+
+.sl-background-blue {
+    background-color: #2196F3;
+}
+
+.sl-background-red { background-color: #F44336; }
+.sl-background-orange { background-color: #FF9800; }
+.sl-background-orange-deep { background-color: #FF5722; }
+
+
+
+/* Font */
+h1 {
+    font-weight: lighter;
+    font-size: 64px;
+    margin: 16px 0 16px 0;
+}
+
+h2 {
+    font-weight: lighter;
+    font-size: 48px;
+    margin: 14px 0 14px 0;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 32px;
+    margin: 12px 0 12px 0;
+}
+
+h4 {
+    display: block;
+    width: 100%;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 10px 0 10px 0;
+}
+
+p {
+    margin: 8px 0 8px 0;
+}
+
+.sl-flex-text-center {
+    margin: auto;
+}
+
+.sl-flex-text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.sl-flex-text-center-w {
+    text-align: center;
+}
+
+/* Icons */
+.sl-flex-fa {
+    display: flex;
+    flex: 0 0 auto;
+    padding: 4px;
+}
+
+.sl-flex-w {
+    flex-direction: row;
+}
+
+.sl-flex-h {
+    flex-direction: column;
+}
+
+.sl-overflow-h {
+    overflow-y: auto;
+}
+
+/* Items */
+.sl-flex-item {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.sl-flex-align-center {
+    justify-content: center;
+}
+
+.sl-flex-align-center-r {
+    align-items: center;
+}
+
+.sl-hide {
+    display: none !important;
+}
+
+/* Text */
+.sl-text-align-center {
+    text-align: center;
+}
+
+/* Paddings */
+.sl-p-y-2 { padding-top: 8px; padding-bottom: 8px; }
+.sl-p-a-4 { padding: 24px; }
+.sl-p-x-6 { padding-left: 64px; padding-right: 64px; }
+
+/***
+*  
+*   MEDIA: PHONE
+*
+***/
+@media all and (max-width: 640px) {
+    .sl-flex-w-s {
+        flex-direction: row;
+    }
+
+    .sl-flex-h-s {
+        flex-direction: column;
+    }
+    
+    .sl-hide-s {
+        display: none !important;
+    }
+    
+    /* Paddings */
+    .sl-p-x-0-s { padding-left: 0; padding-right: 0; }
+    .sl-p-y-0-s { padding-top: 0; padding-bottom: 0; }
+    .sl-p-y-2-s { padding-top: 8px; padding-bottom: 8px; }
+    .sl-p-x-4-s { padding-left: 24px; padding-right: 24px; }
+}
+
+
+

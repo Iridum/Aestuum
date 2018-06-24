@@ -1,10 +1,67 @@
-<h1>Aestuum launcher</h1>
-
-<p>Only works on computer!</p>
-
-<p>
-<a href="#" onClick="window.open('game.html','Aestuum','height=600,width=1024'); return false;">Start</a><noscript>You need Javascript to play</noscript>
-</p>
-
-<p>Launcher version public-0.1<br>
-Game version public-0.1</p>
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Aestuum</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="msapplication-TileImage" content="launcher-icon.png">
+        <meta name="msapplication-TileColor" content="#007bff">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#007bff">
+        <link rel="icon" href="launcher-icon.png" sizes="144x144">
+        
+        <link rel="stylesheet" type="text/css" href="css/slime-0.1.0.css">
+        <link rel="stylesheet" type="text/css" href="css/aestuum.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </head>
+    <body class="sl-app sl-background-gradient" style="transition: all 500ms;">
+        <nav class="sl-flex-nav">
+            <a class="sl-flex-nav-item sl-flex-nav-brand sl-flex-text-center" href="#">
+                <img src="launcher-icon.png" width="30" height="30" alt="">
+                Aestuum
+            </a>
+        </nav>
+        
+        <div class="sl-flex-container sl-flex-h sl-overflow-h">
+            <div class="sl-flex-box sl-flex-card sl-flex-h">
+                <h1 class="sl-text-align-center">Aestuum</h1>
+                <h4 class="sl-text-align-center">A hard platform game.</h4>
+            </div>
+            
+            
+            <div class="sl-flex-box sl-flex-align-center sl-flex-align-center-r sl-flex-h">
+                <h4 style="margin: 2px 0 2px 0;">
+                    <a onclick="window.open('game.html','Aestuum','height=600,width=1024'); return false;" class="sl-flex-box sl-flex-card sl-flex-btn sl-background-transparent-dark-3 aestuum-hide-small">
+                        Play&nbsp;&nbsp;&nbsp;<i class="fas fa-play"></i>
+                    </a>
+                    <a onclick="window.open('game.html','Aestuum','height=600,width=1024'); return false;" class="sl-flex-box sl-flex-card sl-flex-btn sl-background-red aestuum-hide-other aestuum-show-small">
+                        Play&nbsp;&nbsp;&nbsp;<i class="fas fa-play"></i><br>
+                    </a>
+                </h4>
+            </div>
+            <div class="sl-flex-box sl-flex-align-center sl-flex-align-center-r sl-flex-h">
+                <div class="aestuum-hide-other aestuum-show-small sl-background-red sl-p-a-4">
+                    Your screen is too small to play the game: The minimum resolution is 1024x600.<br>
+                    You can still play, but expect having some problems.
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        <div id="game-level-menu" class="sl-flex-box sl-flex-h sl-background-transparent-dark-3 sl-p-a-4">
+            Launcher version: public-0.2<br>
+            Game version: public-0.1
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+</body>
+</html>

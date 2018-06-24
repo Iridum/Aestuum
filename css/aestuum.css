@@ -1,0 +1,7 @@
+.aestuum-hide-other { display: none !important; }
+
+@media all and (max-width: 1024px) and (max-height: 600px) {
+    .aestuum-show-small { display: flex !important; }
+    .aestuum-hide-small { display: none !important; }
+}
+
