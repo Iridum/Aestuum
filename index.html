@@ -19,6 +19,46 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/slime-0.1.0.css">
         <link rel="stylesheet" type="text/css" href="css/aestuum.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+        <style>
+        .overlay {
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .overlay a {font-size: 20px}
+          .overlay .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+          }
+        }
+        </style>
     </head>
     <body class="sl-app sl-background-gradient" style="transition: all 500ms;">
         <nav class="sl-flex-nav">
@@ -28,40 +68,75 @@ and open the template in the editor.
             </a>
         </nav>
         
-        <div class="sl-flex-container sl-flex-h sl-overflow-h">
-            <div class="sl-flex-box sl-flex-card sl-flex-h">
-                <h1 class="sl-text-align-center">Aestuum</h1>
-                <h4 class="sl-text-align-center">A hard platform game.</h4>
+        <div id="myNav" class="overlay sl-background-transparent-dark-7">
+            <div class="sl-flex-box sl-hide-s" style="width: 20%;"></div>
+            <div class="sl-flex-container sl-background-gradient sl-flex-h sl-overflow-h sl-text-align-center sl-flex-align-center sl-flex-align-center-r">
+                <h2>Follow game's twitter page to get the lasts news and support it!</h2>
+                <a href="https://twitter.com/AestuumGame" target="owo" class="sl-flex-box sl-flex-btn sl-background-transparent-dark-3" onclick="closeNav()" style="width: 80%;">Got it!</a>
+                <h5>After clicking the button, the twitter page will be opened in a new tab</h5>
             </div>
-            
-            
-            <div class="sl-flex-box sl-flex-align-center sl-flex-align-center-r sl-flex-h">
-                <h4 style="margin: 2px 0 2px 0;">
-                    <a onclick="window.open('game.html','Aestuum','height=600,width=1024'); return false;" class="sl-flex-box sl-flex-card sl-flex-btn sl-background-transparent-dark-3 aestuum-hide-small">
-                        Play&nbsp;&nbsp;&nbsp;<i class="fas fa-play"></i>
-                    </a>
-                    <a onclick="window.open('game.html','Aestuum','height=600,width=1024'); return false;" class="sl-flex-box sl-flex-card sl-flex-btn sl-background-red aestuum-hide-other aestuum-show-small">
-                        Play&nbsp;&nbsp;&nbsp;<i class="fas fa-play"></i><br>
-                    </a>
-                </h4>
-            </div>
-            <div class="sl-flex-box sl-flex-align-center sl-flex-align-center-r sl-flex-h">
-                <div class="aestuum-hide-other aestuum-show-small sl-background-red sl-p-a-4">
-                    Your screen is too small to play the game: The minimum resolution is 1024x600.<br>
-                    You can still play, but expect having some problems.
-                </div>
-            </div>
-            
-            
-            
-        </div>
-        <div id="game-level-menu" class="sl-flex-box sl-flex-h sl-background-transparent-dark-3 sl-p-a-4">
-            Launcher version: public-0.2<br>
-            Game version: public-0.1
+            <div class="sl-flex-box sl-hide-s" style="width: 20%;"></div>
         </div>
         
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    
+        <div class="sl-flex-container sl-flex-w sl-overflow-h">
+            <div class="sl-flex-box sl-text-align-center sl-flex-h sl-p-a-4">
+                <h4 style="margin: 2px 0 16px 0;">
+                    News
+                </h4>
+                <a class="twitter-timeline" href="https://twitter.com/AestuumGame?ref_src=twsrc%5Etfw">News</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="sl-flex-container sl-text-align-center sl-flex-h sl-p-a-4">
+                <div class="sl-flex-box aestuum-hide-other aestuum-show-small sl-background-red-transparent-7 sl-p-a-4" style="margin-bottom: 12px;">
+                    Your screen is too small to play the game: The minimum resolution is 1024x600.<br>
+                    You can play, but expect having some problems.
+                </div>
+                <div class="sl-flex-container sl-flex-align-center sl-flex-align-center-r sl-flex-w">
+                    <div class="sl-flex-container sl-flex-align-center sl-flex-align-center-r sl-flex-h" style="height: 100%;">
+                        <a onclick="window.open('game.html','Aestuum','height=600,width=1024'); return false;" class="sl-flex-container sl-flex-btn sl-flex-h sl-background-transparent-dark-3" style="padding: 0; width: 100%;">
+                            <h2 style="margin-bottom: 32px;"><i class="fas fa-play"></i></h2>
+                            Adventure
+                        </a>
+                        <a class="sl-flex-box sl-flex-btn sl-p-x-0 sl-p-y-3 sl-flex-w sl-background-transparent-dark-5" style="width: 100%;">
+                            <i class="fas fa-book"></i>&nbsp;&nbsp;Help
+                        </a>
+                    </div>
+                    <div class="sl-flex-container sl-flex-align-center sl-flex-align-center-r sl-flex-h" style="height: 100%;">
+                        <a class="sl-flex-container sl-flex-btn sl-flex-h sl-background-red-transparent-5" style="padding: 0; width: 100%;">
+                            <h2 style="margin-bottom: 32px;"><i class="fas fa-puzzle-piece"></i></h2>
+                            Custom levels
+                        </a>
+                        <a class="sl-flex-box sl-flex-btn sl-p-x-0 sl-p-y-3 sl-flex-w sl-background-red-transparent-7" style="width: 100%;">
+                            <i class="fas fa-book"></i>&nbsp;&nbsp;Help
+                        </a>
+                    </div>
+                    <div class="sl-flex-container sl-flex-align-center sl-flex-align-center-r sl-flex-h" style="height: 100%;">
+                        <a onclick="window.open('game.html?0=0','Aestuum','height=600,width=1024'); return false;" class="sl-flex-container sl-flex-btn sl-flex-h sl-background-transparent-dark-3" style="padding: 0; width: 100%;">
+                            <h2 style="margin-bottom: 32px;"><i class="fas fa-palette"></i></h2>
+                            Level editor
+                        </a>
+                        <a class="sl-flex-box sl-flex-btn sl-p-x-0 sl-p-y-3 sl-flex-w sl-background-transparent-dark-5" style="width: 100%;" href="https://twitter.com/AestuumGame/status/1011577666271576064">
+                            <i class="fas fa-book"></i>&nbsp;&nbsp;Help
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="game-level-menu" class="sl-flex-box sl-flex-h sl-background-transparent-dark-3 sl-p-a-4">
+        Launcher version: public-0.3<br>
+        Game version: public-0.2
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "flex";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+        
+        openNav();
+    </script>
 </body>
 </html>

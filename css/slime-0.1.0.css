@@ -42,12 +42,12 @@ body.sl-app {
 /* Containers */
 .sl-flex-container {
     display: flex;
-    flex: 1;
+    flex: 1 0 !important;
 }
 
 .sl-flex-box {
     display: flex;
-    flex: 0 0 auto;
+    flex: 0 0 auto !important;
 }
 
 .sl-flex-box.sl-flex-card {
@@ -153,21 +153,16 @@ body.sl-app {
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#795bb0', endColorstr='#4ceaff', GradientType=1);
 }
 
-.sl-background-transparent-dark-3 {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.sl-background-green {
-    background-color: #4CAF50 !important;
-}
-
-.sl-background-blue {
-    background-color: #2196F3;
-}
-
+.sl-background-transparent-dark-3 { background-color: rgba(0, 0, 0, 0.3); }
+.sl-background-transparent-dark-5 { background-color: rgba(0, 0, 0, 0.5); }
+.sl-background-transparent-dark-7 { background-color: rgba(0, 0, 0, 0.7); }
 .sl-background-red { background-color: #F44336; }
+.sl-background-red-transparent-5 { background-color: rgba(244,67,54, 0.5); }
+.sl-background-red-transparent-7 { background-color: rgba(244,67,54, 0.7); }
 .sl-background-orange { background-color: #FF9800; }
 .sl-background-orange-deep { background-color: #FF5722; }
+.sl-background-green { background-color: #4CAF50 }
+.sl-background-blue { background-color: #2196F3; }
 
 
 
@@ -259,7 +254,9 @@ p {
 
 /* Paddings */
 .sl-p-y-2 { padding-top: 8px; padding-bottom: 8px; }
+.sl-p-y-3 { padding-top: 16px; padding-bottom: 16px; }
 .sl-p-a-4 { padding: 24px; }
+.sl-p-x-0 { padding-left: 0; padding-right: 0; }
 .sl-p-x-6 { padding-left: 64px; padding-right: 64px; }
 
 /***
